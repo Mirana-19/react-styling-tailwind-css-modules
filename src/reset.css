@@ -1,0 +1,57 @@
+/* Reset all margins, paddings, and box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent font-family and line-height */
+html {
+  font-size: 100%; /* Sets the base font size to 16px */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevents font scaling in mobile browsers */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Replace with your desired font */
+  background-color: #fff;
+  color: #000;
+}
+
+/* Remove list styles on all lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default text decoration on links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherits the color of the surrounding text */
+}
+
+/* Reset table properties */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Ensure images scale properly */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset buttons and inputs */
+button,
+input,
+textarea,
+select {
+  font: inherit; /* Ensure fonts match the surrounding text */
+  outline: none;
+  border: none;
+  background: none;
+}
