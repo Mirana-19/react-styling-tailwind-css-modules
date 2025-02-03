@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+
+import cn from 'classnames';
+
 export const FriendsList = ({ friends }) => {
   console.log(friends);
   return (
@@ -9,7 +12,10 @@ export const FriendsList = ({ friends }) => {
           key={id}
         >
           <span
-            className={`rounded-full w-[10px] h-[10px] ${isOnline ? 'bg-green-600' : 'bg-red-600'}`}
+            className={cn('rounded-full', 'w-[10px]', 'h-[10px]', {
+              'bg-green-600': isOnline,
+              'bg-red-600': !isOnline,
+            })}
           ></span>
           <img className="userList__image block" src={avatar} width="40px" />
           <p className="userList__name "> {name} </p>
